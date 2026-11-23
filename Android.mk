@@ -14,6 +14,18 @@
 
 LOCAL_PATH := $(call my-dir)
 ifneq ($(filter j4primelte j6primelte,$(TARGET_DEVICE)),)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libprotobuf-cpp-lite-v29
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := ../../../prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_INSTALLED_MODULE_STEM := libprotobuf-cpp-lite.so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
