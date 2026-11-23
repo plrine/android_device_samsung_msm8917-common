@@ -372,11 +372,6 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
     
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.3-impl \
-    android.hardware.vibrator@1.3-service
-    
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
