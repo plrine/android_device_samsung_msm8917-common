@@ -45,7 +45,7 @@
 /dev/tzic                      u:object_r:tz_device:s0
 
 # DRM
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                     u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[12]-service\.widevine                  u:object_r:hal_drm_widevine_exec:s0
 
 # EFS files
 /mnt/vendor/efs(/.*)?                          u:object_r:efs_file:s0
@@ -110,8 +110,12 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                      u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.samsung                      u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.1-service\.gts4lv                         u:object_r:hal_usb_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@2\.[0-9]-service        u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@1\.0-service                   u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@2\.0-service-qti                             u:object_r:hal_gnss_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.0-service                            u:object_r:hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@[23]\.[0-9]-service     u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.light@3\.0-service                       u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@[12]\.0-service                u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator@2\.0-service                    u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.qchdcpkprov_server@1\.0-service          u:object_r:hal_qchdcpkprov_default_exec:s0
 /(vendor|system/vendor)/bin/secure_storage_daemon                                                  u:object_r:hal_secure_storage_daemon_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.drk@1\.0-service                            u:object_r:hal_drk_default_exec:s0
