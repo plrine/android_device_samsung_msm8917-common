@@ -175,8 +175,8 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libsec-ril.so|libshims_ril.so \
-    /system/vendor/lib/libsec-ril-dsds.so|libshims_ril.so
+    /vendor/lib/libsec-ril.so|libshims_ril.so \
+    /vendor/lib/libsec-ril-dsds.so|libshims_ril.so
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
