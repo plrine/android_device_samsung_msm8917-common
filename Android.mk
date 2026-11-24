@@ -26,6 +26,18 @@ LOCAL_INSTALLED_MODULE_STEM := libprotobuf-cpp-lite.so
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libprotobuf-cpp-full-v29
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := ../../../prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_INSTALLED_MODULE_STEM := libprotobuf-cpp-full.so
+LOCAL_SHARED_LIBRARIES := libc++ libc libdl liblog libm libz
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
