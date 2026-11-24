@@ -74,6 +74,7 @@ on post-fs-data
     mkdir /persist/data/tz 0700 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/misc/dts 0770 media audio
+    mkdir /dev/socket/netmgr 0755 radio radio
 	
 # for WIFI MAC address
     mkdir /mnt/vendor/efs/wifi 0755 wifi wifi
@@ -171,6 +172,22 @@ service audiod /system/vendor/bin/audiod
    class late_start
    user system
    group system
+
+service rmt_storage /vendor/bin/rmt_storage
+    class core
+    user root
+    ioprio rt 0
+    shutdown critical
+
+service tftp_server /vendor/bin/tftp_server
+    class core
+    user root
+
+# Disabled in Q (libsec-ril handles data)
+#service vendor.netmgrd /vendor/bin/netmgrd
+#    class main
+#    user root
+#    group root wifi wakelock radio inet
 
 on boot
     start rmt_storage
