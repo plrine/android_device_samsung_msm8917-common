@@ -1,0 +1,5 @@
+# Silence linker LD_SHIM_LIBS access(..., R_OK) checks on libsec-ril*.so in coredomains
+dontaudit coredomain vendor_file:file read;
+
+# Silence atrace/libutils trace_marker stat probes
+dontaudit domain debugfs_trace_marker:file getattr;

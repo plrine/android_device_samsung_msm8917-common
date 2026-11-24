@@ -1,5 +1,19 @@
+allow qti_init_shell self:capability { dac_override sys_resource };
+
+allow qti_init_shell shell_exec:file rx_file_perms;
+allow qti_init_shell toolbox_exec:file rx_file_perms;
+
 allow qti_init_shell mnt_vendor_file:dir create_dir_perms;
 
 allow qti_init_shell sensors_persist_file:dir create_dir_perms;
 
+allow qti_init_shell proc_sched:file rw_file_perms;
+allow qti_init_shell sysfs:file w_file_perms;
+allow qti_init_shell sysfs_msm_power:file { rw_file_perms setattr };
+allow qti_init_shell sysfs_net:file w_file_perms;
+allow qti_init_shell sysfs_usb:file w_file_perms;
+
 set_prop(qti_init_shell, ctl_default_prop)
+set_prop(qti_init_shell, ctl_start_prop)
+set_prop(qti_init_shell, default_prop)
+set_prop(qti_init_shell, system_prop)

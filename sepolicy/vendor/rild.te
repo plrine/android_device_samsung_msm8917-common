@@ -1,0 +1,9 @@
+add_hwservice(rild, hal_telephony_hwservice)
+
+allow rild proc_net:file w_file_perms;
+allow rild system_data_file:file r_file_perms;
+allow rild vendor_data_file:dir rw_dir_perms;
+allow rild vendor_data_file:file create_file_perms;
+
+get_prop(rild, csc_prop)
+set_prop(rild, sec_ril_prop)

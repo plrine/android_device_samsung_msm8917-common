@@ -1,1 +1,14 @@
+allow init oemfs:dir mounton;
 allow init omr_file:dir mounton;
+allow init vendor_app_file:dir mounton;
+
+allow init proc:file setattr;
+allow init {
+    proc_dirty
+    proc_extra_free_kbytes
+    proc_hostname
+    proc_min_free_order_shift
+    proc_overcommit_memory
+}:file getattr;
+allow init runtime_event_log_tags_file:file getattr;
+allow init sysfs:file setattr;

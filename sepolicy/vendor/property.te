@@ -5,6 +5,7 @@ type dolby_prop, property_type;
 type ina_status_prop, property_type;
 type receiver_error_prop, property_type;
 type sec_camera_prop, property_type;
+type sec_ril_prop, property_type;
 type sec_cnss_diag_prop, property_type;
 type tzdaemon_prop, property_type;
 type vendor_bssl_post_prop, property_type;

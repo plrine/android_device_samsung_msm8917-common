@@ -10,10 +10,19 @@ genfscon proc /sys/kernel/sched_sync_hint_enable u:object_r:proc_sched:s0
 genfscon proc /sys/kernel/sched_upmigrate u:object_r:proc_sched:s0
 genfscon proc /sys/vm/swappiness u:object_r:proc_swappiness:s0
 
+genfscon sysfs /devices/battery/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/soc:i2c@24/i2c-3/3-0071/power_supply/sm5705-fuelgauge u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:i2c@26/i2c-5/5-0049/sm5705-charger u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/qpnp-rtc-7/rtc/rtc0/hctosys u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/virtual/android_usb/android0/f_mass_storage/lun/nofua u:object_r:sysfs_usb:s0
+genfscon sysfs /devices/virtual/camera u:object_r:sysfs_camera_writable:s0
+genfscon sysfs /devices/virtual/input u:object_r:sysfs_sensors:s0
 genfscon sysfs /devices/virtual/lcd/panel u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/virtual/sensors/ssc_core/ssc_hw_rev u:object_r:sysfs_sensors:s0
+genfscon sysfs /kernel/mm/vmscan/mem_boost_mode u:object_r:sysfs_camera_writable:s0
+genfscon sysfs /module/qpnp_power_on/parameters/reset_enabled u:object_r:sysfs_msm_power:s0
+genfscon sysfs /module/qpnp_power_on/parameters/wake_enabled u:object_r:sysfs_msm_power:s0
 genfscon sysfs /power/cpufreq_max_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_min_limit u:object_r:sysfs_power:s0
 genfscon sysfs /power/cpufreq_table u:object_r:sysfs_power:s0
+genfscon sysfs /power/volkey_wakeup u:object_r:sysfs_msm_power:s0

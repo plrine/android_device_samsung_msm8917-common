@@ -1,0 +1,5 @@
+get_prop(mm-qcamerad, sec_camera_prop)
+
+allow mm-qcamerad camera_data_file:dir search;
+allow mm-qcamerad sysfs_camera_writable:dir r_dir_perms;
+allow mm-qcamerad sysfs_camera_writable:file rw_file_perms;
